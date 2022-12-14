@@ -48,7 +48,7 @@ spec:
             - name: "OPENPROJECT_HTTPS"
               value: "{{ .Values.ingress.tls }}"
             - name: "OPENPROJECT_HOST__NAME"
-              value: "demo.openproject-dev.com"
+              value: "{{ .Values.ingress.host }}"
           volumeMounts:
             - name: opdata
               mountPath: /var/openproject/assets
